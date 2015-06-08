@@ -1,0 +1,1223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmpresaCargoCourierModelStoreContainer" CdmEntityContainer="EmpresaCargoCourierEntities">
+    <FunctionImportMapping FunctionImportName="usp_ConsultarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEmpleado_Result">
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarEmpleado" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarEmpleado" />
+    <FunctionImportMapping FunctionImportName="ConsultarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEmpleado_Result">
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarEmpleado" />
+    <FunctionImportMapping FunctionImportName="InsertarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarEmpleado" />
+    <FunctionImportMapping FunctionImportName="usp_ActualizarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarEmpleado" />
+    <FunctionImportMapping FunctionImportName="ActualizarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarEmpleado" />
+    <EntitySetMapping Name="tb_Chofer">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Chofer">
+        <MappingFragment StoreEntitySet="tb_Chofer">
+          <ScalarProperty Name="TipoBrevete" ColumnName="TipoBrevete" />
+          <ScalarProperty Name="NumeroBrevete" ColumnName="NumeroBrevete" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDChofer" ColumnName="IDChofer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Chofer">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarChofer">
+            <ScalarProperty Name="TipoBrevete" ParameterName="TipoBrevete" />
+            <ScalarProperty Name="NumeroBrevete" ParameterName="NumeroBrevete" />
+            <ScalarProperty Name="DNI" ParameterName="DNI" />
+            <ScalarProperty Name="Telefono" ParameterName="Telefono" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" />
+            <ScalarProperty Name="FechaNacimiento" ParameterName="FechaNacimiento" />
+            <ScalarProperty Name="Apellido_mat" ParameterName="Apellido_mat" />
+            <ScalarProperty Name="Apellido_pat" ParameterName="Apellido_pat" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarChofer">
+            <ScalarProperty Name="IDChofer" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="TipoBrevete" ParameterName="TipoBrevete" Version="Current" />
+            <ScalarProperty Name="NumeroBrevete" ParameterName="NumeroBrevete" Version="Current" />
+            <ScalarProperty Name="DNI" ParameterName="DNI" Version="Current" />
+            <ScalarProperty Name="Telefono" ParameterName="Telefono" Version="Current" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" Version="Current" />
+            <ScalarProperty Name="FechaNacimiento" ParameterName="FechaNacimiento" Version="Current" />
+            <ScalarProperty Name="Apellido_mat" ParameterName="Apellido_mat" Version="Current" />
+            <ScalarProperty Name="Apellido_pat" ParameterName="Apellido_pat" Version="Current" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarChofer">
+            <ScalarProperty Name="IDChofer" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarChofer" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarChofer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarChofer_Result">
+          <ScalarProperty Name="IDChofer" ColumnName="IDChofer" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="NumeroBrevete" ColumnName="NumeroBrevete" />
+          <ScalarProperty Name="TipoBrevete" ColumnName="TipoBrevete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarChofer" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarChofer" />
+    <FunctionImportMapping FunctionImportName="usp_ListarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarChofer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarChofer_Result">
+          <ScalarProperty Name="IDChofer" ColumnName="IDChofer" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="NumeroBrevete" ColumnName="NumeroBrevete" />
+          <ScalarProperty Name="TipoBrevete" ColumnName="TipoBrevete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarChofer" />
+    <FunctionImportMapping FunctionImportName="ConsultarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarChofer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarChofer_Result">
+          <ScalarProperty Name="IDChofer" ColumnName="IDChofer" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="NumeroBrevete" ColumnName="NumeroBrevete" />
+          <ScalarProperty Name="TipoBrevete" ColumnName="TipoBrevete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarChofer" />
+    <FunctionImportMapping FunctionImportName="InsertarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarChofer" />
+    <FunctionImportMapping FunctionImportName="ListarChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarChofer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarChofer_Result">
+          <ScalarProperty Name="IDChofer" ColumnName="IDChofer" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="NumeroBrevete" ColumnName="NumeroBrevete" />
+          <ScalarProperty Name="TipoBrevete" ColumnName="TipoBrevete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarEmpleado_Result">
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ListarEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarEmpleado_Result">
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_Destinatario">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Destinatario">
+        <MappingFragment StoreEntitySet="tb_Destinatario">
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDDestinatario" ColumnName="IDDestinatario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Destinatario">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarDestinatario2">
+            <ScalarProperty Name="Telefono" ParameterName="Telefono" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" />
+            <ScalarProperty Name="DNI" ParameterName="DNI" />
+            <ScalarProperty Name="Apellido_mat" ParameterName="Apellido_mat" />
+            <ScalarProperty Name="Apellido_pat" ParameterName="Apellido_pat" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarDestinatario2">
+            <ScalarProperty Name="IDDestinatario" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="Telefono" ParameterName="Telefono" Version="Current" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" Version="Current" />
+            <ScalarProperty Name="DNI" ParameterName="DNI" Version="Current" />
+            <ScalarProperty Name="Apellido_mat" ParameterName="Apellido_mat" Version="Current" />
+            <ScalarProperty Name="Apellido_pat" ParameterName="Apellido_pat" Version="Current" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarDestinatario">
+            <ScalarProperty Name="IDDestinatario" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarDestinatario2" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarDestinatario2" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarDestinatario2" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarDestinatario2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarDestinatario2_Result">
+          <ScalarProperty Name="IDDestinatario" ColumnName="IDDestinatario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarDestinatario" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarDestinatario" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarDestinatario2" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarDestinatario2" />
+    <FunctionImportMapping FunctionImportName="usp_ListarDestinatario2" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarDestinatario2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarDestinatario2_Result">
+          <ScalarProperty Name="IDDestinatario" ColumnName="IDDestinatario" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarDestinataro2" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarDestinatario2" />
+    <FunctionImportMapping FunctionImportName="ConsultarDestinatario2" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarDestinatario2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarDestinatario2_Result">
+          <ScalarProperty Name="IDDestinatario" ColumnName="IDDestinatario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarDestinatario" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarDestinatario" />
+    <FunctionImportMapping FunctionImportName="InsertarDestinatario2" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarDestinatario2" />
+    <FunctionImportMapping FunctionImportName="ListarDestinatario2" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarDestinatario2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarDestinatario2_Result">
+          <ScalarProperty Name="IDDestinatario" ColumnName="IDDestinatario" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_TipoServicio">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_TipoServicio">
+        <MappingFragment StoreEntitySet="tb_TipoServicio">
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="dias" ColumnName="dias" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDTipoServicio" ColumnName="IDTipoServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_TipoServicio">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarTipoServicio2">
+            <ScalarProperty Name="dias" ParameterName="Dias" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarTipoServicio2">
+            <ScalarProperty Name="IDTipoServicio" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="dias" ParameterName="Dias" Version="Current" />
+            <ScalarProperty Name="Precio" ParameterName="Precio" Version="Current" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarTipoServicio">
+            <ScalarProperty Name="IDTipoServicio" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarTipoServicio2" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarTipoServicio2" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarTipoServicio2" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarTipoServicio2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarTipoServicio2_Result">
+          <ScalarProperty Name="IDTipoServicio" ColumnName="IDTipoServicio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="dias" ColumnName="dias" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarTipoServicio" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarTipoServicio" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarTipoServicio2" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarTipoServicio2" />
+    <FunctionImportMapping FunctionImportName="usp_ListarTipoServicio2" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarTipoServicio2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarTipoServicio2_Result">
+          <ScalarProperty Name="IDTipoServicio" ColumnName="IDTipoServicio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="dias" ColumnName="dias" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarTipoServicio2" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarTipoServicio2" />
+    <FunctionImportMapping FunctionImportName="ConsultarTipoServicio2" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarTipoServicio2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarTipoServicio2_Result">
+          <ScalarProperty Name="IDTipoServicio" ColumnName="IDTipoServicio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="dias" ColumnName="dias" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarTipoServicio" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarTipoServicio" />
+    <FunctionImportMapping FunctionImportName="InsertarTipoServicio2" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarTipoServicio2" />
+    <FunctionImportMapping FunctionImportName="ListarTipoServicio2" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarTipoServicio2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarTipoServicio2_Result">
+          <ScalarProperty Name="IDTipoServicio" ColumnName="IDTipoServicio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="dias" ColumnName="dias" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_Marca">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Marca">
+        <MappingFragment StoreEntitySet="tb_Marca">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDMarca" ColumnName="IDMarca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Marca">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarMarca">
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarMarca">
+            <ScalarProperty Name="IDMarca" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarMarca">
+            <ScalarProperty Name="IDMarca" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarMarca" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarMarca">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarMarca_Result">
+          <ScalarProperty Name="IDMarca" ColumnName="IDMarca" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarMarca" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarMarca" />
+    <FunctionImportMapping FunctionImportName="usp_ListarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarMarca">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarMarca_Result">
+          <ScalarProperty Name="IDMarca" ColumnName="IDMarca" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarMarca" />
+    <FunctionImportMapping FunctionImportName="ConsultarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarMarca">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarMarca_Result">
+          <ScalarProperty Name="IDMarca" ColumnName="IDMarca" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarMarca" />
+    <FunctionImportMapping FunctionImportName="InsertarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarMarca" />
+    <FunctionImportMapping FunctionImportName="ListarMarca" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarMarca">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarMarca_Result">
+          <ScalarProperty Name="IDMarca" ColumnName="IDMarca" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_Transporte">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Transporte">
+        <MappingFragment StoreEntitySet="tb_Transporte">
+          <ScalarProperty Name="TarjetaProp" ColumnName="TarjetaProp" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="IDMarca" ColumnName="IDMarca" />
+          <ScalarProperty Name="IDChofer" ColumnName="IDChofer" />
+          <ScalarProperty Name="IDTransporte" ColumnName="IDTransporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Transporte">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarTransporte">
+            <ScalarProperty Name="TarjetaProp" ParameterName="TarjetaProp" />
+            <ScalarProperty Name="Placa" ParameterName="Placa" />
+            <ScalarProperty Name="Modelo" ParameterName="Modelo" />
+            <ScalarProperty Name="IDMarca" ParameterName="IDMarca" />
+            <ScalarProperty Name="IDChofer" ParameterName="IDChofer" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarTransporte">
+            <ScalarProperty Name="IDTransporte" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="TarjetaProp" ParameterName="TarjetaProp" Version="Current" />
+            <ScalarProperty Name="Placa" ParameterName="Placa" Version="Current" />
+            <ScalarProperty Name="Modelo" ParameterName="Modelo" Version="Current" />
+            <ScalarProperty Name="IDMarca" ParameterName="IDMarca" Version="Current" />
+            <ScalarProperty Name="IDChofer" ParameterName="IDChofer" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarTransporte">
+            <ScalarProperty Name="IDTransporte" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarTransporte" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarTransporte">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarTransporte_Result">
+          <ScalarProperty Name="IDTransporte" ColumnName="IDTransporte" />
+          <ScalarProperty Name="IDChofer" ColumnName="IDChofer" />
+          <ScalarProperty Name="IDMarca" ColumnName="IDMarca" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="TarjetaProp" ColumnName="TarjetaProp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarTransporte" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarTransporte" />
+    <FunctionImportMapping FunctionImportName="usp_ListarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarTransporte">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarTransporte_Result">
+          <ScalarProperty Name="IDTransporte" ColumnName="IDTransporte" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="TarjetaProp" ColumnName="TarjetaProp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarTransporte" />
+    <FunctionImportMapping FunctionImportName="ConsultarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarTransporte">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarTransporte_Result">
+          <ScalarProperty Name="IDTransporte" ColumnName="IDTransporte" />
+          <ScalarProperty Name="IDChofer" ColumnName="IDChofer" />
+          <ScalarProperty Name="IDMarca" ColumnName="IDMarca" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="TarjetaProp" ColumnName="TarjetaProp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarTransporte" />
+    <FunctionImportMapping FunctionImportName="InsertarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarTransporte" />
+    <FunctionImportMapping FunctionImportName="ListarTransporte" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarTransporte">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarTransporte_Result">
+          <ScalarProperty Name="IDTransporte" ColumnName="IDTransporte" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="TarjetaProp" ColumnName="TarjetaProp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_TipoCargo">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_TipoCargo">
+        <MappingFragment StoreEntitySet="tb_TipoCargo">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDTipoCargo" ColumnName="IDTipoCargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_TipoCargo">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarTipoCargo">
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarTipoCargo">
+            <ScalarProperty Name="IDTipoCargo" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarTipoCargo">
+            <ScalarProperty Name="IDTipoCargo" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarTipoCargo" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarTipoCargo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarTipoCargo_Result">
+          <ScalarProperty Name="IDTipoCargo" ColumnName="IDTipoCargo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarTipoCargo" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarTipoCargo" />
+    <FunctionImportMapping FunctionImportName="usp_ListarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarTipoCargo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarTipoCargo_Result">
+          <ScalarProperty Name="IDTipoCargo" ColumnName="IDTipoCargo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarTipoCargo" />
+    <FunctionImportMapping FunctionImportName="ConsultarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarTipoCargo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarTipoCargo_Result">
+          <ScalarProperty Name="IDTipoCargo" ColumnName="IDTipoCargo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarTipoCargo" />
+    <FunctionImportMapping FunctionImportName="InsertarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarTipoCargo" />
+    <FunctionImportMapping FunctionImportName="ListarTipoCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarTipoCargo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarTipoCargo_Result">
+          <ScalarProperty Name="IDTipoCargo" ColumnName="IDTipoCargo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_Cargo">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Cargo">
+        <MappingFragment StoreEntitySet="tb_Cargo">
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IDTipoCargo" ColumnName="IDTipoCargo" />
+          <ScalarProperty Name="IDCargo" ColumnName="IDCargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Cargo">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarCargo">
+            <ScalarProperty Name="UnidadMedida" ParameterName="UnidadMedida" />
+            <ScalarProperty Name="Peso" ParameterName="Peso" />
+            <ScalarProperty Name="Descripcion" ParameterName="Descripcion" />
+            <ScalarProperty Name="IDTipoCargo" ParameterName="IDTipoCargo" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarCargo">
+            <ScalarProperty Name="IDCargo" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="UnidadMedida" ParameterName="UnidadMedida" Version="Current" />
+            <ScalarProperty Name="Peso" ParameterName="Peso" Version="Current" />
+            <ScalarProperty Name="Descripcion" ParameterName="Descripcion" Version="Current" />
+            <ScalarProperty Name="IDTipoCargo" ParameterName="IDTipoCargo" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarCargo">
+            <ScalarProperty Name="IDCargo" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarCargo" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarCargo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarCargo_Result">
+          <ScalarProperty Name="IDCargo" ColumnName="IDCargo" />
+          <ScalarProperty Name="IDTipoCargo" ColumnName="IDTipoCargo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarCargo" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarCargo" />
+    <FunctionImportMapping FunctionImportName="usp_ListarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarCargo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarCargo_Result">
+          <ScalarProperty Name="IDCargo" ColumnName="IDCargo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarCargo" />
+    <FunctionImportMapping FunctionImportName="ConsultarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarCargo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarCargo_Result">
+          <ScalarProperty Name="IDCargo" ColumnName="IDCargo" />
+          <ScalarProperty Name="IDTipoCargo" ColumnName="IDTipoCargo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarCargo" />
+    <FunctionImportMapping FunctionImportName="InsertarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarCargo" />
+    <FunctionImportMapping FunctionImportName="ListarCargo" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarCargo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarCargo_Result">
+          <ScalarProperty Name="IDCargo" ColumnName="IDCargo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_Ciudad">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Ciudad">
+        <MappingFragment StoreEntitySet="tb_Ciudad">
+          <ScalarProperty Name="Kilometros" ColumnName="Kilometros" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDCiudad" ColumnName="IDCiudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Ciudad">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarCiudad2">
+            <ScalarProperty Name="Kilometros" ParameterName="Kilometos" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarCiudad2">
+            <ScalarProperty Name="IDCiudad" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="Kilometros" ParameterName="Kilometros" Version="Current" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarCiudad">
+            <ScalarProperty Name="IDCiudad" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarCiudad2" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarCiudad2" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarCiudad2" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarCiudad2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarCiudad2_Result">
+          <ScalarProperty Name="IDCiudad" ColumnName="IDCiudad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Kilometros" ColumnName="Kilometros" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarCiudad" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarCiudad" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarCiudad2" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarCiudad2" />
+    <FunctionImportMapping FunctionImportName="usp_ListarCiudad2" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarCiudad2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarCiudad2_Result">
+          <ScalarProperty Name="IDCiudad" ColumnName="IDCiudad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Kilometros" ColumnName="Kilometros" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarCiudad2" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarCiudad2" />
+    <FunctionImportMapping FunctionImportName="ConsultarCiudad2" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarCiudad2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarCiudad2_Result">
+          <ScalarProperty Name="IDCiudad" ColumnName="IDCiudad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Kilometros" ColumnName="Kilometros" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarCiudad" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarCiudad" />
+    <FunctionImportMapping FunctionImportName="InsertarCiudad2" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarCiudad2" />
+    <FunctionImportMapping FunctionImportName="ListarCiudad2" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarCiudad2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarCiudad2_Result">
+          <ScalarProperty Name="IDCiudad" ColumnName="IDCiudad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Kilometros" ColumnName="Kilometros" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_Destino">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Destino">
+        <MappingFragment StoreEntitySet="tb_Destino">
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IDCiudad" ColumnName="IDCiudad" />
+          <ScalarProperty Name="IDDestino" ColumnName="IDDestino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Destino">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarDestino">
+            <ScalarProperty Name="Distrito" ParameterName="Distrito" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" />
+            <ScalarProperty Name="IDCiudad" ParameterName="IDCiudad" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarDestino">
+            <ScalarProperty Name="IDDestino" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="Distrito" ParameterName="Distrito" Version="Current" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" Version="Current" />
+            <ScalarProperty Name="IDCiudad" ParameterName="IDCiudad" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarDestino">
+            <ScalarProperty Name="IDDestino" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarDestino" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarDestino">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarDestino_Result">
+          <ScalarProperty Name="IDDestino" ColumnName="IDDestino" />
+          <ScalarProperty Name="IDCiudad" ColumnName="IDCiudad" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarDestino" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarDestino" />
+    <FunctionImportMapping FunctionImportName="usp_ListarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarDestino">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarDestino_Result">
+          <ScalarProperty Name="IDDestino" ColumnName="IDDestino" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarDestino" />
+    <FunctionImportMapping FunctionImportName="ConsultarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarDestino">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarDestino_Result">
+          <ScalarProperty Name="IDDestino" ColumnName="IDDestino" />
+          <ScalarProperty Name="IDCiudad" ColumnName="IDCiudad" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarDestino" />
+    <FunctionImportMapping FunctionImportName="InsertarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarDestino" />
+    <FunctionImportMapping FunctionImportName="ListarDestino" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarDestino">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarDestino_Result">
+          <ScalarProperty Name="IDDestino" ColumnName="IDDestino" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_ReporteIncidencia">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_ReporteIncidencia">
+        <MappingFragment StoreEntitySet="tb_ReporteIncidencia">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="Retraso" ColumnName="Retraso" />
+          <ScalarProperty Name="Notificado" ColumnName="Notificado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="IDReporte" ColumnName="IDReporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_ReporteIncidencia">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarReporteIncidencia">
+            <ScalarProperty Name="Fecha" ParameterName="Fecha" />
+            <ScalarProperty Name="Descrip" ParameterName="Descrip" />
+            <ScalarProperty Name="Retraso" ParameterName="Retraso" />
+            <ScalarProperty Name="Notificado" ParameterName="Notificado" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" />
+            <ScalarProperty Name="IDEnvio" ParameterName="IDEnvio" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarReporteIncidencia">
+            <ScalarProperty Name="IDReporte" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="Fecha" ParameterName="Fecha" Version="Current" />
+            <ScalarProperty Name="Descrip" ParameterName="Descrip" Version="Current" />
+            <ScalarProperty Name="Retraso" ParameterName="Retraso" Version="Current" />
+            <ScalarProperty Name="Notificado" ParameterName="Notificado" Version="Current" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" Version="Current" />
+            <ScalarProperty Name="IDEnvio" ParameterName="IDEnvio" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarReporteIncidencia">
+            <ScalarProperty Name="IDReporte" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarReporteIncidencia" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarReporteIncidencia" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarReporteIncidencia" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarReporteIncidencia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarReporteIncidencia_Result">
+          <ScalarProperty Name="IDReporte" ColumnName="IDReporte" />
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Notificado" ColumnName="Notificado" />
+          <ScalarProperty Name="Retraso" ColumnName="Retraso" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarReporteIncidencia" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarReporteIncidencia" />
+    <FunctionImportMapping FunctionImportName="usp_InsertarReporteIncidencia" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarReporteIncidencia" />
+    <FunctionImportMapping FunctionImportName="usp_ListarReporteIncidencia" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarReporteIncidencia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarReporteIncidencia_Result">
+          <ScalarProperty Name="IDReporte" ColumnName="IDReporte" />
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Notificado" ColumnName="Notificado" />
+          <ScalarProperty Name="Retraso" ColumnName="Retraso" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizarReporteIncidencia" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarReporteIncidencia" />
+    <FunctionImportMapping FunctionImportName="ConsultarReporteIncidencia" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarReporteIncidencia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarReporteIncidencia_Result">
+          <ScalarProperty Name="IDReporte" ColumnName="IDReporte" />
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Notificado" ColumnName="Notificado" />
+          <ScalarProperty Name="Retraso" ColumnName="Retraso" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarReporteIncidencia" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarReporteIncidencia" />
+    <FunctionImportMapping FunctionImportName="ListarReporteIncidencia" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarReporteIncidencia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarReporteIncidencia_Result">
+          <ScalarProperty Name="IDReporte" ColumnName="IDReporte" />
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Notificado" ColumnName="Notificado" />
+          <ScalarProperty Name="Retraso" ColumnName="Retraso" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarCorreoCliente2" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarCorreoCliente2" />
+    <FunctionImportMapping FunctionImportName="ListarCorreoCliente2" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarCorreoCliente2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.ListarCorreoCliente2_Result">
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_Empleado">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Empleado">
+        <MappingFragment StoreEntitySet="tb_Empleado">
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Empleado">
+        <ModificationFunctionMapping>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarEmpleado">
+            <ScalarProperty Name="foto" ParameterName="Foto" Version="Current" />
+            <ScalarProperty Name="IDEmpleado" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="Pass" ParameterName="Pass" Version="Current" />
+            <ScalarProperty Name="Usuario" ParameterName="Usuario" Version="Current" />
+            <ScalarProperty Name="Sexo" ParameterName="Sexo" Version="Current" />
+            <ScalarProperty Name="DNI" ParameterName="DNI" Version="Current" />
+            <ScalarProperty Name="Telefono" ParameterName="Telefono" Version="Current" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" Version="Current" />
+            <ScalarProperty Name="FechaNacimiento" ParameterName="FechaNacimiento" Version="Current" />
+            <ScalarProperty Name="Apellido_mat" ParameterName="Apellido_mat" Version="Current" />
+            <ScalarProperty Name="Apellido_pat" ParameterName="Apellido_pat" Version="Current" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarEmpleado">
+            <ScalarProperty Name="IDEmpleado" ParameterName="IDEliminar" />
+          </DeleteFunction>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarEmpleado">
+            <ScalarProperty Name="foto" ParameterName="Foto" />
+            <ScalarProperty Name="Pass" ParameterName="Pass" />
+            <ScalarProperty Name="Sexo" ParameterName="Sexo" />
+            <ScalarProperty Name="DNI" ParameterName="DNI" />
+            <ScalarProperty Name="Telefono" ParameterName="Telefono" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" />
+            <ScalarProperty Name="FechaNacimiento" ParameterName="FechaNacimiento" />
+            <ScalarProperty Name="Apellido_mat" ParameterName="Apellido_mat" />
+            <ScalarProperty Name="Apellido_pat" ParameterName="Apellido_pat" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarEnvioPendiente" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarEnvioPendiente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarEnvioPendiente_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Tipo_Servicio" ColumnName="Tipo_Servicio" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ListarEnvioPendiente" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarEnvioPendiente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarEnvioPendiente_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Tipo_Servicio" ColumnName="Tipo_Servicio" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarCliente" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarCliente" />
+    <FunctionImportMapping FunctionImportName="usp_ListarCliente" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarCliente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarCliente_Result">
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="RUC" ColumnName="RUC" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarCliente" FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarCliente" />
+    <FunctionImportMapping FunctionImportName="ListarCliente" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarCliente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarCliente_Result">
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="RUC" ColumnName="RUC" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tb_Cliente">
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Cliente">
+        <MappingFragment StoreEntitySet="tb_Cliente">
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="RUC" ColumnName="RUC" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="EmpresaCargoCourierModel.tb_Cliente">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarCliente2">
+            <ScalarProperty Name="Correo" ParameterName="Correo" />
+            <ScalarProperty Name="Pass" ParameterName="Pass" />
+            <ScalarProperty Name="DNI" ParameterName="DNI" />
+            <ScalarProperty Name="Telefono" ParameterName="Telefono" />
+            <ScalarProperty Name="RUC" ParameterName="RUC" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" />
+            <ScalarProperty Name="FechaNacimiento" ParameterName="FechaNacimiento" />
+            <ScalarProperty Name="Apellido_mat" ParameterName="Apellido_mat" />
+            <ScalarProperty Name="Apellido_pat" ParameterName="Apellido_pat" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarCliente2">
+            <ScalarProperty Name="IDCliente" ParameterName="IDActualizar" Version="Original" />
+            <ScalarProperty Name="Correo" ParameterName="Correo" Version="Current" />
+            <ScalarProperty Name="Pass" ParameterName="Pass" Version="Current" />
+            <ScalarProperty Name="Usuario" ParameterName="Usuario" Version="Current" />
+            <ScalarProperty Name="DNI" ParameterName="DNI" Version="Current" />
+            <ScalarProperty Name="Telefono" ParameterName="Telefono" Version="Current" />
+            <ScalarProperty Name="RUC" ParameterName="RUC" Version="Current" />
+            <ScalarProperty Name="Direccion" ParameterName="Direccion" Version="Current" />
+            <ScalarProperty Name="FechaNacimiento" ParameterName="FechaNacimiento" Version="Current" />
+            <ScalarProperty Name="Apellido_mat" ParameterName="Apellido_mat" Version="Current" />
+            <ScalarProperty Name="Apellido_pat" ParameterName="Apellido_pat" Version="Current" />
+            <ScalarProperty Name="Nombre" ParameterName="Nombre" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="EmpresaCargoCourierModel.Store.usp_EliminarCliente">
+            <ScalarProperty Name="IDCliente" ParameterName="IDEliminar" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ActualizarCliente2" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarCliente2" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarCliente2" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarCliente2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarCliente2_Result">
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="RUC" ColumnName="RUC" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_InsertarCliente2" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarCliente2" />
+    <FunctionImportMapping FunctionImportName="ActualizarCliente2" FunctionName="EmpresaCargoCourierModel.Store.usp_ActualizarCliente2" />
+    <FunctionImportMapping FunctionImportName="ConsultarCliente2" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarCliente2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarCliente2_Result">
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido_pat" ColumnName="Apellido_pat" />
+          <ScalarProperty Name="Apellido_mat" ColumnName="Apellido_mat" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="RUC" ColumnName="RUC" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertarCliente2" FunctionName="EmpresaCargoCourierModel.Store.usp_InsertarCliente2" />
+    <FunctionImportMapping FunctionImportName="usp_ConsultarEnvioCiudad" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEnvioCiudad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEnvioCiudad_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ConsultarEnvioCiudad" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEnvioCiudad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEnvioCiudad_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarEmpleadoEnvioFecha" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEmpleadoEnvioFecha">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEmpleadoEnvioFecha_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TCNombre" ColumnName="TCNombre" />
+          <ScalarProperty Name="TSNombre" ColumnName="TSNombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ConsultarEmpleadoEnvioFecha" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEmpleadoEnvioFecha">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEmpleadoEnvioFecha_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TCNombre" ColumnName="TCNombre" />
+          <ScalarProperty Name="TSNombre" ColumnName="TSNombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarEnvioChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarEnvioChofer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarEnvioChofer_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="CINombre" ColumnName="CINombre" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="TCNombre" ColumnName="TCNombre" />
+          <ScalarProperty Name="TSNombre" ColumnName="TSNombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ListarEnvioChofer" FunctionName="EmpresaCargoCourierModel.Store.usp_ListarEnvioChofer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ListarEnvioChofer_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="CINombre" ColumnName="CINombre" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="TCNombre" ColumnName="TCNombre" />
+          <ScalarProperty Name="TSNombre" ColumnName="TSNombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarEnvioEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEnvioEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEnvioEmpleado_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="CINombre" ColumnName="CINombre" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="TCNombre" ColumnName="TCNombre" />
+          <ScalarProperty Name="TSNombre" ColumnName="TSNombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ConsultarEnvioEmpleado" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEnvioEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEnvioEmpleado_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="CINombre" ColumnName="CINombre" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="TCNombre" ColumnName="TCNombre" />
+          <ScalarProperty Name="TSNombre" ColumnName="TSNombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ConsultarEnvioCliente" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEnvioCliente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEnvioCliente_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="CINombre" ColumnName="CINombre" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="TCNombre" ColumnName="TCNombre" />
+          <ScalarProperty Name="TSNombre" ColumnName="TSNombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ConsultarEnvioCliente" FunctionName="EmpresaCargoCourierModel.Store.usp_ConsultarEnvioCliente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmpresaCargoCourierModel.usp_ConsultarEnvioCliente_Result">
+          <ScalarProperty Name="IDEnvio" ColumnName="IDEnvio" />
+          <ScalarProperty Name="CINombre" ColumnName="CINombre" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="TCNombre" ColumnName="TCNombre" />
+          <ScalarProperty Name="TSNombre" ColumnName="TSNombre" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="FechaEstimada" ColumnName="FechaEstimada" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+   <siteMapNode title="Inicio" description="Home" 
+      url="~/default.aspx" >
+     <siteMapNode title="Mantenimientos" 
+       description="Mantenimientos de Negocio" 
+       url="~/Mantenimientos/Mantenimientos.aspx"
+       roles="Administrador">
+      </siteMapNode>
+    <siteMapNode title="Consultas" 
+         description="Consultas Varias"
+         url="~/Consultas/Consultas.aspx"
+         roles ="Administrador,Operador">
+     </siteMapNode> 
+     
+
+
+    <!--<siteMapNode title="Transacciones" 
+         description="Transacciones Varias" 
+         url="~/Transacciones/Transacciones.aspx"
+         roles="Administrador">
+     </siteMapNode>
+	   <siteMapNode title="Reportes"
+         description="Reportes Varios"
+         url="~/Reportes/Reportes.aspx"
+         roles="Administrador">
+	   </siteMapNode>
+    <siteMapNode title="Seguridad" 
+         description="Modulo de Seguridad" 
+         url="~/Seguridad/Seguridad.aspx"
+         roles ="Administrador">
+    </siteMapNode>-->
+     
+     
+     
+	   <!--<siteMapNode title="Cerrar Sesión" 
+		description="Cierre de Sesion" 
+		url="~/Logout.aspx"
+		roles ="Administrador,Operador">
+	   </siteMapNode>-->
+  </siteMapNode>
+  </siteMap>

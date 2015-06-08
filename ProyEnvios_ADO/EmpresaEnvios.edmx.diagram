@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c4d43e26503749a295f183e9ea847b3a" Name="Diagrama1">
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_Chofer" Width="1.5" PointX="2.125" PointY="0.5" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_Destinatario" Width="1.5" PointX="3.75" PointY="0.5" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_TipoServicio" Width="1.5" PointX="5.375" PointY="0.5" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_Marca" Width="1.5" PointX="7" PointY="0.5" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_Transporte" Width="1.5" PointX="5.75" PointY="3.375" />
+        <AssociationConnector Association="EmpresaCargoCourierModel.fk_Chofer" />
+        <AssociationConnector Association="EmpresaCargoCourierModel.fk_Marca" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_TipoCargo" Width="1.5" PointX="8.625" PointY="0.5" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_Cargo" Width="1.5" PointX="8.375" PointY="3.25" />
+        <AssociationConnector Association="EmpresaCargoCourierModel.fk_TipoCargo_Cargo" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_Ciudad" Width="1.5" PointX="10.25" PointY="0.5" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_Destino" Width="1.5" PointX="10.5" PointY="3.25" />
+        <AssociationConnector Association="EmpresaCargoCourierModel.fk_Ciudad_Destino" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_ReporteIncidencia" Width="1.5" PointX="1.625" PointY="4.375" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_Empleado" Width="1.5" PointX="0.5" PointY="0.625" />
+        <EntityTypeShape EntityType="EmpresaCargoCourierModel.tb_Cliente" Width="1.5" PointX="12.375" PointY="0.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

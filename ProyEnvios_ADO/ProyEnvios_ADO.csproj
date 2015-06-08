@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1322853-AFF8-4453-A861-52D763876F19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyEnvios_ADO</RootNamespace>
+    <AssemblyName>ProyEnvios_ADO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CargoADO.cs" />
+    <Compile Include="ChoferADO.cs" />
+    <Compile Include="CiudadADO.cs" />
+    <Compile Include="ClienteADO.cs" />
+    <Compile Include="DestinatarioADO.cs" />
+    <Compile Include="DestinoADO.cs" />
+    <Compile Include="EmpleadoADO.cs" />
+    <Compile Include="EmpresaEnvios.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpresaEnvios.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaEnvios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaEnvios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpresaEnvios.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioADO.cs" />
+    <Compile Include="ListarCorreoCliente2_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MarcaADO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteIncidenciaADO.cs" />
+    <Compile Include="tb_Cargo.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Chofer.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Ciudad.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Cliente.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Destinatario.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Destino.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Empleado.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Marca.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_ReporteIncidencia.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_TipoCargo.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_TipoServicio.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Transporte.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoCargoADO.cs" />
+    <Compile Include="TipoServicioADO.cs" />
+    <Compile Include="TransporteADO.cs" />
+    <Compile Include="usp_ConsultarCargo_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarChofer_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarCiudad2_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarCliente2_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarDestinatario2_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarDestino_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarEmpleadoEnvioFecha_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarEmpleado_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarEnvioCiudad_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarEnvioCliente_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarEnvioEmpleado_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarMarca_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarReporteIncidencia_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarTipoCargo_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarTipoServicio2_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ConsultarTransporte_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarCargo_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarChofer_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarCiudad2_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarCliente_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarDestinatario2_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarDestino_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarEmpleado_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarEnvioChofer_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarEnvioPendiente_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarMarca_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarReporteIncidencia_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarTipoCargo_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarTipoServicio2_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarTransporte_Result.cs">
+      <DependentUpon>EmpresaEnvios.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProyEnvios_BE\ProyEnvios_BE.csproj">
+      <Project>{61e5f668-d276-4fa0-b3f8-62882cfcabd8}</Project>
+      <Name>ProyEnvios_BE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EmpresaEnvios.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EmpresaEnvios.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="EmpresaEnvios.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmpresaEnvios.edmx</DependentUpon>
+      <LastGenOutput>EmpresaEnvios.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EmpresaEnvios.edmx.diagram">
+      <DependentUpon>EmpresaEnvios.edmx</DependentUpon>
+    </None>
+    <None Include="EmpresaEnvios.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmpresaEnvios.edmx</DependentUpon>
+      <LastGenOutput>EmpresaEnvios.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1034 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpresaCargoCourierModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EmpresaCargoCourierEntities" p1:LazyLoadingEnabled="true">
+    <FunctionImport Name="usp_ConsultarEmpleado" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEmpleado_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarEmpleado">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarEmpleado">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="Int32" />
+      <Parameter Name="Sexo" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+      <Parameter Name="Foto" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarEmpleado" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEmpleado_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarEmpleado">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarEmpleado">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="Int32" />
+      <Parameter Name="Sexo" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+      <Parameter Name="Foto" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ActualizarEmpleado">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="Int32" />
+      <Parameter Name="Sexo" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+      <Parameter Name="Foto" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="ActualizarEmpleado">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="Int32" />
+      <Parameter Name="Sexo" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+      <Parameter Name="Foto" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <EntitySet Name="tb_Chofer" EntityType="EmpresaCargoCourierModel.tb_Chofer" />
+    <FunctionImport Name="usp_ActualizarChofer">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="Int32" />
+      <Parameter Name="NumeroBrevete" Mode="In" Type="String" />
+      <Parameter Name="TipoBrevete" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarChofer" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarChofer_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarChofer">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarChofer">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="Int32" />
+      <Parameter Name="NumeroBrevete" Mode="In" Type="String" />
+      <Parameter Name="TipoBrevete" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarChofer" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarChofer_Result)" />
+    <FunctionImport Name="ActualizarChofer">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="Int32" />
+      <Parameter Name="NumeroBrevete" Mode="In" Type="String" />
+      <Parameter Name="TipoBrevete" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarChofer" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarChofer_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarChofer">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarChofer">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="Int32" />
+      <Parameter Name="NumeroBrevete" Mode="In" Type="String" />
+      <Parameter Name="TipoBrevete" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarChofer" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarChofer_Result)" />
+    <FunctionImport Name="usp_ListarEmpleado" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarEmpleado_Result)" />
+    <FunctionImport Name="ListarEmpleado" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarEmpleado_Result)" />
+    <EntitySet Name="tb_Destinatario" EntityType="EmpresaCargoCourierModel.tb_Destinatario" />
+    <FunctionImport Name="usp_ActualizarDestinatario2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarDestinatario2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarDestinatario2_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarDestinatario">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarDestinatario2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarDestinatario2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarDestinatario2_Result)" />
+    <FunctionImport Name="ActualizarDestinataro2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarDestinatario2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarDestinatario2_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarDestinatario">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarDestinatario2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarDestinatario2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarDestinatario2_Result)" />
+    <EntitySet Name="tb_TipoServicio" EntityType="EmpresaCargoCourierModel.tb_TipoServicio" />
+    <FunctionImport Name="usp_ActualizarTipoServicio2">
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Dias" Mode="In" Type="Int32" />
+      <Parameter Name="Precio" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarTipoServicio2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarTipoServicio2_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarTipoServicio">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarTipoServicio2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Dias" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarTipoServicio2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarTipoServicio2_Result)" />
+    <FunctionImport Name="ActualizarTipoServicio2">
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Dias" Mode="In" Type="Int32" />
+      <Parameter Name="Precio" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarTipoServicio2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarTipoServicio2_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarTipoServicio">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarTipoServicio2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Dias" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ListarTipoServicio2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarTipoServicio2_Result)" />
+    <EntitySet Name="tb_Marca" EntityType="EmpresaCargoCourierModel.tb_Marca" />
+    <FunctionImport Name="usp_ActualizarMarca">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarMarca" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarMarca_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarMarca">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarMarca">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarMarca" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarMarca_Result)" />
+    <FunctionImport Name="ActualizarMarca">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarMarca" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarMarca_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarMarca">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarMarca">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarMarca" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarMarca_Result)" />
+    <EntitySet Name="tb_Transporte" EntityType="EmpresaCargoCourierModel.tb_Transporte" />
+    <AssociationSet Name="fk_Chofer" Association="EmpresaCargoCourierModel.fk_Chofer">
+      <End Role="tb_Chofer" EntitySet="tb_Chofer" />
+      <End Role="tb_Transporte" EntitySet="tb_Transporte" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Marca" Association="EmpresaCargoCourierModel.fk_Marca">
+      <End Role="tb_Marca" EntitySet="tb_Marca" />
+      <End Role="tb_Transporte" EntitySet="tb_Transporte" />
+    </AssociationSet>
+    <FunctionImport Name="usp_ActualizarTransporte">
+      <Parameter Name="IDChofer" Mode="In" Type="String" />
+      <Parameter Name="IDMarca" Mode="In" Type="String" />
+      <Parameter Name="Modelo" Mode="In" Type="String" />
+      <Parameter Name="Placa" Mode="In" Type="String" />
+      <Parameter Name="TarjetaProp" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarTransporte" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarTransporte_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarTransporte">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarTransporte">
+      <Parameter Name="IDChofer" Mode="In" Type="String" />
+      <Parameter Name="IDMarca" Mode="In" Type="String" />
+      <Parameter Name="Modelo" Mode="In" Type="String" />
+      <Parameter Name="Placa" Mode="In" Type="String" />
+      <Parameter Name="TarjetaProp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarTransporte" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarTransporte_Result)" />
+    <FunctionImport Name="ActualizarTransporte">
+      <Parameter Name="IDChofer" Mode="In" Type="String" />
+      <Parameter Name="IDMarca" Mode="In" Type="String" />
+      <Parameter Name="Modelo" Mode="In" Type="String" />
+      <Parameter Name="Placa" Mode="In" Type="String" />
+      <Parameter Name="TarjetaProp" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarTransporte" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarTransporte_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarTransporte">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarTransporte">
+      <Parameter Name="IDChofer" Mode="In" Type="String" />
+      <Parameter Name="IDMarca" Mode="In" Type="String" />
+      <Parameter Name="Modelo" Mode="In" Type="String" />
+      <Parameter Name="Placa" Mode="In" Type="String" />
+      <Parameter Name="TarjetaProp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarTransporte" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarTransporte_Result)" />
+    <EntitySet Name="tb_TipoCargo" EntityType="EmpresaCargoCourierModel.tb_TipoCargo" />
+    <FunctionImport Name="usp_ActualizarTipoCargo">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarTipoCargo" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarTipoCargo_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarTipoCargo">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarTipoCargo">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarTipoCargo" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarTipoCargo_Result)" />
+    <FunctionImport Name="ActualizarTipoCargo">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarTipoCargo" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarTipoCargo_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarTipoCargo">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarTipoCargo">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarTipoCargo" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarTipoCargo_Result)" />
+    <EntitySet Name="tb_Cargo" EntityType="EmpresaCargoCourierModel.tb_Cargo" />
+    <AssociationSet Name="fk_TipoCargo_Cargo" Association="EmpresaCargoCourierModel.fk_TipoCargo_Cargo">
+      <End Role="tb_TipoCargo" EntitySet="tb_TipoCargo" />
+      <End Role="tb_Cargo" EntitySet="tb_Cargo" />
+    </AssociationSet>
+    <FunctionImport Name="usp_ActualizarCargo">
+      <Parameter Name="IDTipoCargo" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="Peso" Mode="In" Type="Double" />
+      <Parameter Name="UnidadMedida" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarCargo" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarCargo_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarCargo">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarCargo">
+      <Parameter Name="IDTipoCargo" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="Peso" Mode="In" Type="Double" />
+      <Parameter Name="UnidadMedida" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarCargo" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarCargo_Result)" />
+    <FunctionImport Name="ActualizarCargo">
+      <Parameter Name="IDTipoCargo" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="Peso" Mode="In" Type="Double" />
+      <Parameter Name="UnidadMedida" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarCargo" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarCargo_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarCargo">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarCargo">
+      <Parameter Name="IDTipoCargo" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="Peso" Mode="In" Type="Double" />
+      <Parameter Name="UnidadMedida" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarCargo" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarCargo_Result)" />
+    <EntitySet Name="tb_Ciudad" EntityType="EmpresaCargoCourierModel.tb_Ciudad" />
+    <FunctionImport Name="usp_ActualizarCiudad2">
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Kilometros" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarCiudad2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarCiudad2_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarCiudad">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarCiudad2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Kilometos" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarCiudad2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarCiudad2_Result)" />
+    <FunctionImport Name="ActualizarCiudad2">
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Kilometros" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarCiudad2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarCiudad2_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarCiudad">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarCiudad2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Kilometos" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ListarCiudad2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarCiudad2_Result)" />
+    <EntitySet Name="tb_Destino" EntityType="EmpresaCargoCourierModel.tb_Destino" />
+    <AssociationSet Name="fk_Ciudad_Destino" Association="EmpresaCargoCourierModel.fk_Ciudad_Destino">
+      <End Role="tb_Ciudad" EntitySet="tb_Ciudad" />
+      <End Role="tb_Destino" EntitySet="tb_Destino" />
+    </AssociationSet>
+    <FunctionImport Name="usp_ActualizarDestino">
+      <Parameter Name="IDCiudad" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Distrito" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarDestino" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarDestino_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarDestino">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarDestino">
+      <Parameter Name="IDCiudad" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Distrito" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarDestino" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarDestino_Result)" />
+    <FunctionImport Name="ActualizarDestino">
+      <Parameter Name="IDCiudad" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Distrito" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarDestino" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarDestino_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarDestino">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarDestino">
+      <Parameter Name="IDCiudad" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Distrito" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarDestino" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarDestino_Result)" />
+    <EntitySet Name="tb_ReporteIncidencia" EntityType="EmpresaCargoCourierModel.tb_ReporteIncidencia" />
+    <FunctionImport Name="usp_ActualizarReporteIncidencia">
+      <Parameter Name="IDEnvio" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Notificado" Mode="In" Type="Int32" />
+      <Parameter Name="Retraso" Mode="In" Type="Int32" />
+      <Parameter Name="Descrip" Mode="In" Type="String" />
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarReporteIncidencia" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarReporteIncidencia_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_EliminarReporteIncidencia">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarReporteIncidencia">
+      <Parameter Name="IDEnvio" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Notificado" Mode="In" Type="Int32" />
+      <Parameter Name="Retraso" Mode="In" Type="Int32" />
+      <Parameter Name="Descrip" Mode="In" Type="String" />
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarReporteIncidencia" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarReporteIncidencia_Result)" />
+    <FunctionImport Name="ActualizarReporteIncidencia">
+      <Parameter Name="IDEnvio" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Notificado" Mode="In" Type="Int32" />
+      <Parameter Name="Retraso" Mode="In" Type="Int32" />
+      <Parameter Name="Descrip" Mode="In" Type="String" />
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarReporteIncidencia" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarReporteIncidencia_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarReporteIncidencia">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarReporteIncidencia" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarReporteIncidencia_Result)" />
+    <FunctionImport Name="usp_ListarCorreoCliente2" ReturnType="Collection(String)">
+      <Parameter Name="IDEnvio" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarCorreoCliente2" ReturnType="Collection(EmpresaCargoCourierModel.ListarCorreoCliente2_Result)">
+      <Parameter Name="IDEnvio" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tb_Empleado" EntityType="EmpresaCargoCourierModel.tb_Empleado" />
+    <FunctionImport Name="usp_ListarEnvioPendiente" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarEnvioPendiente_Result)" />
+    <FunctionImport Name="ListarEnvioPendiente" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarEnvioPendiente_Result)" />
+    <FunctionImport Name="usp_EliminarCliente">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarCliente" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarCliente_Result)" />
+    <FunctionImport Name="EliminarCliente">
+      <Parameter Name="IDEliminar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarCliente" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarCliente_Result)" />
+    <EntitySet Name="tb_Cliente" EntityType="EmpresaCargoCourierModel.tb_Cliente" />
+    <FunctionImport Name="usp_ActualizarCliente2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="RUC" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+      <Parameter Name="Correo" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarCliente2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarCliente2_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_InsertarCliente2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="RUC" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+      <Parameter Name="Correo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ActualizarCliente2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="RUC" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+      <Parameter Name="Correo" Mode="In" Type="String" />
+      <Parameter Name="IDActualizar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarCliente2" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarCliente2_Result)">
+      <Parameter Name="IDConsultar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarCliente2">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido_pat" Mode="In" Type="String" />
+      <Parameter Name="Apellido_mat" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="RUC" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+      <Parameter Name="Correo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarEnvioCiudad" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEnvioCiudad_Result)">
+      <Parameter Name="IDCiudad" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarEnvioCiudad" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEnvioCiudad_Result)">
+      <Parameter Name="IDCiudad" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarEmpleadoEnvioFecha" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEmpleadoEnvioFecha_Result)">
+      <Parameter Name="IDEmpleado" Mode="In" Type="String" />
+      <Parameter Name="FecIni" Mode="In" Type="DateTime" />
+      <Parameter Name="FecFin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarEmpleadoEnvioFecha" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEmpleadoEnvioFecha_Result)">
+      <Parameter Name="IDEmpleado" Mode="In" Type="String" />
+      <Parameter Name="FecIni" Mode="In" Type="DateTime" />
+      <Parameter Name="FecFin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarEnvioChofer" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarEnvioChofer_Result)">
+      <Parameter Name="IDChofer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ListarEnvioChofer" ReturnType="Collection(EmpresaCargoCourierModel.usp_ListarEnvioChofer_Result)">
+      <Parameter Name="IDChofer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarEnvioEmpleado" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEnvioEmpleado_Result)">
+      <Parameter Name="IDEmpleado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarEnvioEmpleado" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEnvioEmpleado_Result)">
+      <Parameter Name="IDEmpleado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ConsultarEnvioCliente" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEnvioCliente_Result)">
+      <Parameter Name="IDCliente" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarEnvioCliente" ReturnType="Collection(EmpresaCargoCourierModel.usp_ConsultarEnvioCliente_Result)">
+      <Parameter Name="IDCliente" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="usp_ConsultarEmpleado_Result">
+    <Property Type="String" Name="IDEmpleado" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido_pat" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido_mat" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="DNI" Nullable="false" />
+    <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="Pass" Nullable="false" MaxLength="30" />
+    <Property Type="Binary" Name="foto" Nullable="false" MaxLength="Max" />
+  </ComplexType>
+  <EntityType Name="tb_Chofer">
+    <Key>
+      <PropertyRef Name="IDChofer" />
+    </Key>
+    <Property Type="String" Name="IDChofer" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Apellido_pat" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Apellido_mat" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DNI" Nullable="false" />
+    <Property Type="String" Name="NumeroBrevete" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TipoBrevete" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Transporte" Relationship="EmpresaCargoCourierModel.fk_Chofer" FromRole="tb_Chofer" ToRole="tb_Transporte" />
+  </EntityType>
+  <ComplexType Name="usp_ConsultarChofer_Result">
+    <Property Type="String" Name="IDChofer" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido_pat" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido_mat" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="DNI" Nullable="false" />
+    <Property Type="String" Name="NumeroBrevete" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="TipoBrevete" Nullable="false" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarChofer_Result">
+    <Property Type="String" Name="IDChofer" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Razon_Social" Nullable="false" MaxLength="62" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="DNI" Nullable="false" />
+    <Property Type="String" Name="NumeroBrevete" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="TipoBrevete" Nullable="false" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarEmpleado_Result">
+    <Property Type="String" Name="IDEmpleado" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Razon_Social" Nullable="false" MaxLength="62" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="DNI" Nullable="false" />
+    <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="Pass" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <EntityType Name="tb_Destinatario">
+    <Key>
+      <PropertyRef Name="IDDestinatario" />
+    </Key>
+    <Property Type="String" Name="IDDestinatario" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Apellido_pat" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Apellido_mat" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Direccion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Telefono" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="usp_ConsultarDestinatario2_Result">
+    <Property Type="String" Name="IDDestinatario" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido_pat" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Apellido_mat" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="Direccion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Telefono" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarDestinatario2_Result">
+    <Property Type="String" Name="IDDestinatario" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Razon_Social" Nullable="true" MaxLength="72" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="Direccion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Telefono" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <EntityType Name="tb_TipoServicio">
+    <Key>
+      <PropertyRef Name="IDTipoServicio" />
+    </Key>
+    <Property Type="String" Name="IDTipoServicio" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="dias" Nullable="false" />
+    <Property Type="Decimal" Name="Precio" Precision="19" Scale="4" />
+  </EntityType>
+  <ComplexType Name="usp_ConsultarTipoServicio2_Result">
+    <Property Type="String" Name="IDTipoServicio" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="dias" Nullable="false" />
+    <Property Type="Decimal" Name="Precio" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarTipoServicio2_Result">
+    <Property Type="String" Name="IDTipoServicio" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="dias" Nullable="false" />
+    <Property Type="Decimal" Name="Precio" Nullable="true" Precision="19" />
+  </ComplexType>
+  <EntityType Name="tb_Marca">
+    <Key>
+      <PropertyRef Name="IDMarca" />
+    </Key>
+    <Property Type="String" Name="IDMarca" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Transporte" Relationship="EmpresaCargoCourierModel.fk_Marca" FromRole="tb_Marca" ToRole="tb_Transporte" />
+  </EntityType>
+  <ComplexType Name="usp_ConsultarMarca_Result">
+    <Property Type="String" Name="IDMarca" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarMarca_Result">
+    <Property Type="String" Name="IDMarca" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <EntityType Name="tb_Transporte">
+    <Key>
+      <PropertyRef Name="IDTransporte" />
+    </Key>
+    <Property Type="String" Name="IDTransporte" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IDChofer" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IDMarca" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Modelo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Placa" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TarjetaProp" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Chofer" Relationship="EmpresaCargoCourierModel.fk_Chofer" FromRole="tb_Transporte" ToRole="tb_Chofer" />
+    <NavigationProperty Name="tb_Marca" Relationship="EmpresaCargoCourierModel.fk_Marca" FromRole="tb_Transporte" ToRole="tb_Marca" />
+  </EntityType>
+  <Association Name="fk_Chofer">
+    <End Type="EmpresaCargoCourierModel.tb_Chofer" Role="tb_Chofer" Multiplicity="1" />
+    <End Type="EmpresaCargoCourierModel.tb_Transporte" Role="tb_Transporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Chofer">
+        <PropertyRef Name="IDChofer" />
+      </Principal>
+      <Dependent Role="tb_Transporte">
+        <PropertyRef Name="IDChofer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Marca">
+    <End Type="EmpresaCargoCourierModel.tb_Marca" Role="tb_Marca" Multiplicity="1" />
+    <End Type="EmpresaCargoCourierModel.tb_Transporte" Role="tb_Transporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Marca">
+        <PropertyRef Name="IDMarca" />
+      </Principal>
+      <Dependent Role="tb_Transporte">
+        <PropertyRef Name="IDMarca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="usp_ConsultarTransporte_Result">
+    <Property Type="String" Name="IDTransporte" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="IDChofer" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="IDMarca" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Modelo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Placa" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TarjetaProp" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarTransporte_Result">
+    <Property Type="String" Name="IDTransporte" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Razon_Social" Nullable="false" MaxLength="62" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Modelo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Placa" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TarjetaProp" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="tb_TipoCargo">
+    <Key>
+      <PropertyRef Name="IDTipoCargo" />
+    </Key>
+    <Property Type="String" Name="IDTipoCargo" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Cargo" Relationship="EmpresaCargoCourierModel.fk_TipoCargo_Cargo" FromRole="tb_TipoCargo" ToRole="tb_Cargo" />
+  </EntityType>
+  <ComplexType Name="usp_ConsultarTipoCargo_Result">
+    <Property Type="String" Name="IDTipoCargo" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarTipoCargo_Result">
+    <Property Type="String" Name="IDTipoCargo" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="tb_Cargo">
+    <Key>
+      <PropertyRef Name="IDCargo" />
+    </Key>
+    <Property Type="String" Name="IDCargo" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IDTipoCargo" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="Peso" />
+    <Property Type="String" Name="UnidadMedida" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_TipoCargo" Relationship="EmpresaCargoCourierModel.fk_TipoCargo_Cargo" FromRole="tb_Cargo" ToRole="tb_TipoCargo" />
+  </EntityType>
+  <Association Name="fk_TipoCargo_Cargo">
+    <End Type="EmpresaCargoCourierModel.tb_TipoCargo" Role="tb_TipoCargo" Multiplicity="1" />
+    <End Type="EmpresaCargoCourierModel.tb_Cargo" Role="tb_Cargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_TipoCargo">
+        <PropertyRef Name="IDTipoCargo" />
+      </Principal>
+      <Dependent Role="tb_Cargo">
+        <PropertyRef Name="IDTipoCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="usp_ConsultarCargo_Result">
+    <Property Type="String" Name="IDCargo" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="IDTipoCargo" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" />
+    <Property Type="Double" Name="Peso" Nullable="true" />
+    <Property Type="String" Name="UnidadMedida" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarCargo_Result">
+    <Property Type="String" Name="IDCargo" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" />
+    <Property Type="Double" Name="Peso" Nullable="true" />
+    <Property Type="String" Name="UnidadMedida" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="tb_Ciudad">
+    <Key>
+      <PropertyRef Name="IDCiudad" />
+    </Key>
+    <Property Type="String" Name="IDCiudad" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Kilometros" />
+    <NavigationProperty Name="tb_Destino" Relationship="EmpresaCargoCourierModel.fk_Ciudad_Destino" FromRole="tb_Ciudad" ToRole="tb_Destino" />
+  </EntityType>
+  <ComplexType Name="usp_ConsultarCiudad2_Result">
+    <Property Type="String" Name="IDCiudad" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="Kilometros" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarCiudad2_Result">
+    <Property Type="String" Name="IDCiudad" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="Kilometros" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="tb_Destino">
+    <Key>
+      <PropertyRef Name="IDDestino" />
+    </Key>
+    <Property Type="String" Name="IDDestino" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IDCiudad" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Distrito" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Ciudad" Relationship="EmpresaCargoCourierModel.fk_Ciudad_Destino" FromRole="tb_Destino" ToRole="tb_Ciudad" />
+  </EntityType>
+  <Association Name="fk_Ciudad_Destino">
+    <End Type="EmpresaCargoCourierModel.tb_Ciudad" Role="tb_Ciudad" Multiplicity="1" />
+    <End Type="EmpresaCargoCourierModel.tb_Destino" Role="tb_Destino" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Ciudad">
+        <PropertyRef Name="IDCiudad" />
+      </Principal>
+      <Dependent Role="tb_Destino">
+        <PropertyRef Name="IDCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="usp_ConsultarDestino_Result">
+    <Property Type="String" Name="IDDestino" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="IDCiudad" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Distrito" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarDestino_Result">
+    <Property Type="String" Name="IDDestino" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Distrito" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <EntityType Name="tb_ReporteIncidencia">
+    <Key>
+      <PropertyRef Name="IDReporte" />
+    </Key>
+    <Property Type="String" Name="IDReporte" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IDEnvio" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Notificado" Nullable="false" />
+    <Property Type="Int32" Name="Retraso" Nullable="false" />
+    <Property Type="String" Name="Descrip" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Fecha" Precision="3" />
+  </EntityType>
+  <ComplexType Name="usp_ConsultarReporteIncidencia_Result">
+    <Property Type="String" Name="IDReporte" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="IDEnvio" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="Notificado" Nullable="false" />
+    <Property Type="Int32" Name="Retraso" Nullable="false" />
+    <Property Type="String" Name="Descrip" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarReporteIncidencia_Result">
+    <Property Type="String" Name="IDReporte" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="IDEnvio" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="Notificado" Nullable="false" />
+    <Property Type="Int32" Name="Retraso" Nullable="false" />
+    <Property Type="String" Name="Descrip" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="ListarCorreoCliente2_Result">
+    <Property Type="String" Name="Correo" Nullable="true" MaxLength="70" />
+  </ComplexType>
+  <EntityType Name="tb_Empleado">
+    <Key>
+      <PropertyRef Name="IDEmpleado" />
+    </Key>
+    <Property Type="String" Name="IDEmpleado" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Apellido_pat" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Apellido_mat" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DNI" Nullable="false" />
+    <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Pass" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="foto" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <ComplexType Name="usp_ListarEnvioPendiente_Result">
+    <Property Type="String" Name="IDEnvio" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre_Cliente" Nullable="false" MaxLength="62" />
+    <Property Type="String" Name="Placa" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="Tipo_Servicio" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Estatus" Nullable="true" MaxLength="9" />
+    <Property Type="DateTime" Name="FechaEstimada" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarCliente_Result">
+    <Property Type="String" Name="IDCliente" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Razon_Social" Nullable="false" MaxLength="62" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="RUC" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Telefono" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Correo" Nullable="true" MaxLength="70" />
+  </ComplexType>
+  <EntityType Name="tb_Cliente">
+    <Key>
+      <PropertyRef Name="IDCliente" />
+    </Key>
+    <Property Type="String" Name="IDCliente" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Apellido_pat" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Apellido_mat" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RUC" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Telefono" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Pass" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Correo" MaxLength="70" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="usp_ConsultarCliente2_Result">
+    <Property Type="String" Name="IDCliente" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido_pat" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido_mat" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="RUC" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Telefono" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Pass" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Correo" Nullable="true" MaxLength="70" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarEnvioCiudad_Result">
+    <Property Type="String" Name="IDEnvio" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Estatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Razon_Social" Nullable="false" MaxLength="41" />
+    <Property Type="DateTime" Name="FechaEstimada" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Distrito" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Direccion" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarEmpleadoEnvioFecha_Result">
+    <Property Type="String" Name="IDEnvio" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="Razon_Social" Nullable="false" MaxLength="62" />
+    <Property Type="DateTime" Name="FechaEstimada" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TCNombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="TSNombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Estatus" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarEnvioChofer_Result">
+    <Property Type="String" Name="IDEnvio" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CINombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Distrito" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="TCNombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="TSNombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Estatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Placa" Nullable="false" MaxLength="8" />
+    <Property Type="DateTime" Name="FechaEstimada" Nullable="false" Precision="23" />
+    <Property Type="Double" Name="Peso" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarEnvioEmpleado_Result">
+    <Property Type="String" Name="IDEnvio" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CINombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Distrito" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="TCNombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="TSNombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Estatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Placa" Nullable="false" MaxLength="8" />
+    <Property Type="DateTime" Name="FechaEstimada" Nullable="false" Precision="23" />
+    <Property Type="Double" Name="Peso" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ConsultarEnvioCliente_Result">
+    <Property Type="String" Name="IDEnvio" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="CINombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Distrito" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="TCNombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="TSNombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Estatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Placa" Nullable="false" MaxLength="8" />
+    <Property Type="DateTime" Name="FechaEstimada" Nullable="false" Precision="23" />
+    <Property Type="Double" Name="Peso" Nullable="true" />
+  </ComplexType>
+</Schema>

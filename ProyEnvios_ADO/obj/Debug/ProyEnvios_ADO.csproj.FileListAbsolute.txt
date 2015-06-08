@@ -1,0 +1,44 @@
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.dll.config
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.dll
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.pdb
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\EntityFramework.dll
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_BE.dll
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_BE.pdb
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\EntityFramework.xml
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\es\EntityFramework.resources.dll
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.csprojResolveAssemblyReference.cache
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.dll
+D:\Practica DSW II\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.pdb
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.dll.config
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.dll
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.pdb
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\EntityFramework.dll
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_BE.dll
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_BE.pdb
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\EntityFramework.xml
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.csprojResolveAssemblyReference.cache
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.dll
+C:\Users\Geovanni\Desktop\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.pdb
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.dll.config
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.dll
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.pdb
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\EntityFramework.dll
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_BE.dll
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_BE.pdb
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\EntityFramework.xml
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.csprojResolveAssemblyReference.cache
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.dll
+C:\Users\Geovanni\Desktop\Material PARCIAL\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.pdb
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.dll.config
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.dll
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_ADO.pdb
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\EntityFramework.dll
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_BE.dll
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\ProyEnvios_BE.pdb
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\EntityFramework.xml
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\bin\Debug\es\EntityFramework.resources.dll
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.csprojResolveAssemblyReference.cache
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.dll
+E:\ISIL_2014\DSII\proy\ProyEnviosWEB_3Capas_EF\ProyEnvios_ADO\obj\Debug\ProyEnvios_ADO.pdb

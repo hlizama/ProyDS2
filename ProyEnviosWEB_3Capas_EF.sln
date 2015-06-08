@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyEnvios_ADO", "ProyEnvios_ADO\ProyEnvios_ADO.csproj", "{C1322853-AFF8-4453-A861-52D763876F19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyEnvios_BE", "ProyEnvios_BE\ProyEnvios_BE.csproj", "{61E5F668-D276-4FA0-B3F8-62882CFCABD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyEnvios_BL", "ProyEnvios_BL\ProyEnvios_BL.csproj", "{4BAA6B2B-5D56-48E3-927A-61728D34E634}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ProyEnviosWEB_GUI(1)", "http://localhost:1036", "{51365661-708A-4129-85BC-4D9497B1FDAF}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{61e5f668-d276-4fa0-b3f8-62882cfcabd8}|ProyEnvios_BE.dll;{4baa6b2b-5d56-48e3-927a-61728d34e634}|ProyEnvios_BL.dll;{C1322853-AFF8-4453-A861-52D763876F19}|ProyEnvios_ADO.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1036"
+		Debug.AspNetCompiler.PhysicalPath = "ProyEnviosWEB_GUI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1036\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1036"
+		Release.AspNetCompiler.PhysicalPath = "ProyEnviosWEB_GUI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1036\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ProyEnviosWEB_GUI\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1322853-AFF8-4453-A861-52D763876F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1322853-AFF8-4453-A861-52D763876F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1322853-AFF8-4453-A861-52D763876F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1322853-AFF8-4453-A861-52D763876F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E5F668-D276-4FA0-B3F8-62882CFCABD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E5F668-D276-4FA0-B3F8-62882CFCABD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E5F668-D276-4FA0-B3F8-62882CFCABD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E5F668-D276-4FA0-B3F8-62882CFCABD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BAA6B2B-5D56-48E3-927A-61728D34E634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BAA6B2B-5D56-48E3-927A-61728D34E634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BAA6B2B-5D56-48E3-927A-61728D34E634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BAA6B2B-5D56-48E3-927A-61728D34E634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51365661-708A-4129-85BC-4D9497B1FDAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51365661-708A-4129-85BC-4D9497B1FDAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51365661-708A-4129-85BC-4D9497B1FDAF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{51365661-708A-4129-85BC-4D9497B1FDAF}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

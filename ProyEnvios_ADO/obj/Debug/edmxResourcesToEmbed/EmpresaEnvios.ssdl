@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpresaCargoCourierModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="EmpresaCargoCourierModelStoreContainer">
+    <EntitySet Name="tb_Cargo" EntityType="EmpresaCargoCourierModel.Store.tb_Cargo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_Chofer" EntityType="EmpresaCargoCourierModel.Store.tb_Chofer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_Ciudad" EntityType="EmpresaCargoCourierModel.Store.tb_Ciudad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_Cliente" EntityType="EmpresaCargoCourierModel.Store.tb_Cliente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_Destinatario" EntityType="EmpresaCargoCourierModel.Store.tb_Destinatario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_Destino" EntityType="EmpresaCargoCourierModel.Store.tb_Destino" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_Empleado" EntityType="EmpresaCargoCourierModel.Store.tb_Empleado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_Marca" EntityType="EmpresaCargoCourierModel.Store.tb_Marca" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_ReporteIncidencia" EntityType="EmpresaCargoCourierModel.Store.tb_ReporteIncidencia" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_TipoCargo" EntityType="EmpresaCargoCourierModel.Store.tb_TipoCargo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_TipoServicio" EntityType="EmpresaCargoCourierModel.Store.tb_TipoServicio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_Transporte" EntityType="EmpresaCargoCourierModel.Store.tb_Transporte" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="fk_Chofer" Association="EmpresaCargoCourierModel.Store.fk_Chofer">
+      <End Role="tb_Chofer" EntitySet="tb_Chofer" />
+      <End Role="tb_Transporte" EntitySet="tb_Transporte" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Ciudad_Destino" Association="EmpresaCargoCourierModel.Store.fk_Ciudad_Destino">
+      <End Role="tb_Ciudad" EntitySet="tb_Ciudad" />
+      <End Role="tb_Destino" EntitySet="tb_Destino" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Marca" Association="EmpresaCargoCourierModel.Store.fk_Marca">
+      <End Role="tb_Marca" EntitySet="tb_Marca" />
+      <End Role="tb_Transporte" EntitySet="tb_Transporte" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoCargo_Cargo" Association="EmpresaCargoCourierModel.Store.fk_TipoCargo_Cargo">
+      <End Role="tb_TipoCargo" EntitySet="tb_TipoCargo" />
+      <End Role="tb_Cargo" EntitySet="tb_Cargo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tb_Cargo">
+    <Key>
+      <PropertyRef Name="IDCargo" />
+    </Key>
+    <Property Name="IDCargo" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="IDTipoCargo" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Peso" Type="float" />
+    <Property Name="UnidadMedida" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tb_Chofer">
+    <Key>
+      <PropertyRef Name="IDChofer" />
+    </Key>
+    <Property Name="IDChofer" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Apellido_pat" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Apellido_mat" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Direccion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Telefono" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="DNI" Type="int" Nullable="false" />
+    <Property Name="NumeroBrevete" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="TipoBrevete" Type="nvarchar" Nullable="false" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="tb_Ciudad">
+    <Key>
+      <PropertyRef Name="IDCiudad" />
+    </Key>
+    <Property Name="IDCiudad" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Kilometros" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_Cliente">
+    <Key>
+      <PropertyRef Name="IDCliente" />
+    </Key>
+    <Property Name="IDCliente" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Apellido_pat" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Apellido_mat" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Direccion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RUC" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="10" />
+    <Property Name="DNI" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="Usuario" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Pass" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Correo" Type="nvarchar" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="tb_Destinatario">
+    <Key>
+      <PropertyRef Name="IDDestinatario" />
+    </Key>
+    <Property Name="IDDestinatario" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="30" />
+    <Property Name="Apellido_pat" Type="nvarchar" MaxLength="20" />
+    <Property Name="Apellido_mat" Type="nvarchar" MaxLength="20" />
+    <Property Name="DNI" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tb_Destino">
+    <Key>
+      <PropertyRef Name="IDDestino" />
+    </Key>
+    <Property Name="IDDestino" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="IDCiudad" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Direccion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Distrito" Type="nvarchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tb_Empleado">
+    <Key>
+      <PropertyRef Name="IDEmpleado" />
+    </Key>
+    <Property Name="IDEmpleado" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Apellido_pat" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Apellido_mat" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Direccion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Telefono" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="DNI" Type="int" Nullable="false" />
+    <Property Name="Sexo" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="Usuario" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Pass" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="foto" Type="image" />
+  </EntityType>
+  <EntityType Name="tb_Marca">
+    <Key>
+      <PropertyRef Name="IDMarca" />
+    </Key>
+    <Property Name="IDMarca" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tb_ReporteIncidencia">
+    <Key>
+      <PropertyRef Name="IDReporte" />
+    </Key>
+    <Property Name="IDReporte" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="IDEnvio" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Notificado" Type="int" Nullable="false" />
+    <Property Name="Retraso" Type="int" Nullable="false" />
+    <Property Name="Descrip" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Fecha" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tb_TipoCargo">
+    <Key>
+      <PropertyRef Name="IDTipoCargo" />
+    </Key>
+    <Property Name="IDTipoCargo" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tb_TipoServicio">
+    <Key>
+      <PropertyRef Name="IDTipoServicio" />
+    </Key>
+    <Property Name="IDTipoServicio" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="dias" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="money" />
+  </EntityType>
+  <EntityType Name="tb_Transporte">
+    <Key>
+      <PropertyRef Name="IDTransporte" />
+    </Key>
+    <Property Name="IDTransporte" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="IDChofer" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="IDMarca" Type="nvarchar" Nullable="false" MaxLength="5" />
+    <Property Name="Modelo" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Placa" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="TarjetaProp" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="fk_Chofer">
+    <End Role="tb_Chofer" Type="EmpresaCargoCourierModel.Store.tb_Chofer" Multiplicity="1" />
+    <End Role="tb_Transporte" Type="EmpresaCargoCourierModel.Store.tb_Transporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Chofer">
+        <PropertyRef Name="IDChofer" />
+      </Principal>
+      <Dependent Role="tb_Transporte">
+        <PropertyRef Name="IDChofer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Ciudad_Destino">
+    <End Role="tb_Ciudad" Type="EmpresaCargoCourierModel.Store.tb_Ciudad" Multiplicity="1" />
+    <End Role="tb_Destino" Type="EmpresaCargoCourierModel.Store.tb_Destino" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Ciudad">
+        <PropertyRef Name="IDCiudad" />
+      </Principal>
+      <Dependent Role="tb_Destino">
+        <PropertyRef Name="IDCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Marca">
+    <End Role="tb_Marca" Type="EmpresaCargoCourierModel.Store.tb_Marca" Multiplicity="1" />
+    <End Role="tb_Transporte" Type="EmpresaCargoCourierModel.Store.tb_Transporte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Marca">
+        <PropertyRef Name="IDMarca" />
+      </Principal>
+      <Dependent Role="tb_Transporte">
+        <PropertyRef Name="IDMarca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoCargo_Cargo">
+    <End Role="tb_TipoCargo" Type="EmpresaCargoCourierModel.Store.tb_TipoCargo" Multiplicity="1" />
+    <End Role="tb_Cargo" Type="EmpresaCargoCourierModel.Store.tb_Cargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_TipoCargo">
+        <PropertyRef Name="IDTipoCargo" />
+      </Principal>
+      <Dependent Role="tb_Cargo">
+        <PropertyRef Name="IDTipoCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_ActualizarCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDTipoCargo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Peso" Type="float" Mode="In" />
+    <Parameter Name="UnidadMedida" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarChofer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_pat" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_mat" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="datetime" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="int" Mode="In" />
+    <Parameter Name="NumeroBrevete" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoBrevete" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarCiudad2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Kilometros" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarCliente2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_pat" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_mat" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="datetime" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="RUC" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="nvarchar" Mode="In" />
+    <Parameter Name="Usuario" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pass" Type="nvarchar" Mode="In" />
+    <Parameter Name="Correo" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarDestinatario2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_pat" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_mat" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarDestino" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCiudad" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Distrito" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_pat" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_mat" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="datetime" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="int" Mode="In" />
+    <Parameter Name="Sexo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Usuario" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pass" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+    <Parameter Name="Foto" Type="image" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarReporteIncidencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEnvio" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Notificado" Type="int" Mode="In" />
+    <Parameter Name="Retraso" Type="int" Mode="In" />
+    <Parameter Name="Descrip" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fecha" Type="datetime" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarTipoCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarTipoServicio2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Dias" Type="int" Mode="In" />
+    <Parameter Name="Precio" Type="money" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDChofer" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDMarca" Type="nvarchar" Mode="In" />
+    <Parameter Name="Modelo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Placa" Type="nvarchar" Mode="In" />
+    <Parameter Name="TarjetaProp" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDActualizar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarChofer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarCiudad2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarCliente2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarDestinatario2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarDestino" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarEmpleadoEnvioFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEmpleado" Type="nvarchar" Mode="In" />
+    <Parameter Name="FecIni" Type="datetime" Mode="In" />
+    <Parameter Name="FecFin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarEnvioCiudad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCiudad" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarEnvioCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCliente" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarEnvioEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEmpleado" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarReporteIncidencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarTipoCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarTipoServicio2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDConsultar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarChofer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarCiudad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarDestinatario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarDestino" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarReporteIncidencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarTipoCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarTipoServicio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEliminar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDTipoCargo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Peso" Type="float" Mode="In" />
+    <Parameter Name="UnidadMedida" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarChofer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_pat" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_mat" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="datetime" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="int" Mode="In" />
+    <Parameter Name="NumeroBrevete" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoBrevete" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarCiudad2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Kilometos" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarCliente2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_pat" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_mat" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="datetime" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="RUC" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pass" Type="nvarchar" Mode="In" />
+    <Parameter Name="Correo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarDestinatario2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_pat" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_mat" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarDestino" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDCiudad" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Distrito" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_pat" Type="nvarchar" Mode="In" />
+    <Parameter Name="Apellido_mat" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="datetime" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="int" Mode="In" />
+    <Parameter Name="Sexo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pass" Type="nvarchar" Mode="In" />
+    <Parameter Name="Foto" Type="image" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarReporteIncidencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEnvio" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Notificado" Type="int" Mode="In" />
+    <Parameter Name="Retraso" Type="int" Mode="In" />
+    <Parameter Name="Descrip" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fecha" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarTipoCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarTipoServicio2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Dias" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDChofer" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDMarca" Type="nvarchar" Mode="In" />
+    <Parameter Name="Modelo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Placa" Type="nvarchar" Mode="In" />
+    <Parameter Name="TarjetaProp" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarChofer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarCiudad2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarCorreoCliente2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDEnvio" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarDestinatario2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarDestino" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarEnvioChofer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDChofer" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarEnvioPendiente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarMarca" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarReporteIncidencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarTipoCargo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarTipoServicio2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarTransporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>
