@@ -7,22 +7,19 @@
     </hgroup>
 
     <article>
-        <p>        
+        <p>
             Use esta área para proporcionar información adicional.
         </p>
 
-        <p>        
+        <p>
             Use esta área para proporcionar información adicional.
         </p>
 
-        <p>        
-            Use esta área para proporcionar información adicional.
-        </p>
     </article>
 
     <aside>
         <h3>Título complementario</h3>
-        <p>        
+        <p>
             Use esta área para proporcionar información adicional.
         </p>
         <ul>
